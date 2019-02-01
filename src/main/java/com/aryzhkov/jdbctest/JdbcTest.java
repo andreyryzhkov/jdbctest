@@ -20,9 +20,7 @@ public class JdbcTest {
             connection = DriverManager.getConnection(properties.getProperty("DB_URL"),
                     properties.getProperty("DB_USERNAME"),
                     properties.getProperty("DB_PASSWORD"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
         return connection;
